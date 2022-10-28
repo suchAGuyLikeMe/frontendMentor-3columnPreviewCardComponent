@@ -1,0 +1,156 @@
+:root{
+    
+    /*primary colors*/
+
+    --primaryBightOrange: hsl(31, 77%, 52%);
+    --primaryDarkCyan: hsl(184, 100%, 22%);
+    --primaryVeryDarkCyan: hsl(179, 100%, 13%);
+
+    /*neutral colors*/
+
+    /*paragraphs*/
+    --neutralWhite: hsla(0, 0%, 100%, 0.75);
+
+    /*background, headings, buttons*/   
+    --neutralVeryLightGray: hsl(0, 0%, 95%);
+
+    /*typography*/
+    --fontSize: 15px;
+
+    /*fonts and weigths*/
+
+    /*heading*/
+    --fontFamilyOne: "Big Shoulders Display", sans-sarif;
+    --weights700: 700;
+
+    /*paragraph and button*/
+    --fontFamilyTwo: "Lexend Deca", sans-sarif;
+    --weights400: 400;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--neutralVeryLightGray);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+main{
+    max-width: 80%;
+}
+
+section{
+    padding: 2.5rem;
+}
+
+.sedan{
+    background-color: var(--primaryBightOrange);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.suv{
+    background-color: var(--primaryDarkCyan);
+}
+
+.luxury{
+    background-color: var(--primaryVeryDarkCyan);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+h1, p{
+    color: var(--neutralVeryLightGray);
+}
+
+p, a{
+    font-family: var(--fontFamilyTwo);
+    font-size: var(--fontSize);
+    font-weight: var(--weights400);
+}
+
+img{
+    width: 30%;
+}
+
+h1{
+    font-family: var(--fontFamilyOne);
+    text-transform: uppercase;
+    font-size: xx-large;
+    letter-spacing: 0.15ch;
+    font-weight: var(--weights700);
+    padding: 2rem 0;
+}
+
+p{
+    margin-bottom: 1rem;
+}
+
+a{
+    background-color: var(--neutralVeryLightGray);
+    border-radius: 1.25rem;
+    padding: 0.625rem 1.25rem;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+/*non active button colors*/
+.sedanLink{
+    color: var(--primaryBightOrange);
+}
+
+.suvLink{
+    color: var(--primaryDarkCyan);
+}
+
+.luxuryLink{
+    color: var(--primaryVeryDarkCyan);
+}
+
+/*active button colors*/
+.sedanLink:hover,
+.sedanLink:focus{
+    background-color: var(--primaryBightOrange);
+    color: var(--neutralVeryLightGray);
+    border: 1px solid var(--neutralVeryLightGray);
+    transition: 1s;
+}
+
+.suvLink:hover,
+.suvLink:focus{
+    background-color: var(--primaryDarkCyan);
+    color: var(--neutralVeryLightGray);
+    border: 1px solid var(--neutralVeryLightGray);
+    transition: 1s;
+}
+
+.luxuryLink:hover,
+.luxuryLink:focus{
+    background-color: var(--primaryVeryDarkCyan);
+    color: var(--neutralVeryLightGray);
+    border: 1px solid var(--neutralVeryLightGray);
+    transition: 1s;
+}
+
+@media screen and (min-width: 480px){
+    main{
+        width: 50%;
+    }
+
+    section{
+        float: left;
+        width: 33.33%;
+    }
+
+    .sedan{
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+    
+    .luxury{
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+}
