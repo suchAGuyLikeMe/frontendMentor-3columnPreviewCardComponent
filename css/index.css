@@ -2,30 +2,30 @@
     
     /*primary colors*/
 
-    --primaryBightOrange: hsl(31, 77%, 52%);
-    --primaryDarkCyan: hsl(184, 100%, 22%);
-    --primaryVeryDarkCyan: hsl(179, 100%, 13%);
+    --primary-bright-organe: hsl(31, 77%, 52%);
+    --primary-dark-cyan: hsl(184, 100%, 22%);
+    --primary-very-dark-cyan: hsl(179, 100%, 13%);
 
     /*neutral colors*/
 
     /*paragraphs*/
-    --neutralWhite: hsla(0, 0%, 100%, 0.75);
+    --neutral-white: hsla(0, 0%, 100%, 0.75);
 
     /*background, headings, buttons*/   
-    --neutralVeryLightGray: hsl(0, 0%, 95%);
+    --neutral-very-light-gray: hsl(0, 0%, 95%);
 
     /*typography*/
-    --fontSize: 15px;
+    --font-size: 15px;
 
     /*fonts and weigths*/
 
     /*heading*/
-    --fontFamilyOne: "Big Shoulders Display", sans-sarif;
-    --weights700: 700;
+    --font-family-one: "Big Shoulders Display", sans-sarif;
+    --weight-700: 700;
 
     /*paragraph and button*/
-    --fontFamilyTwo: "Lexend Deca", sans-sarif;
-    --weights400: 400;
+    --font-family-two: "Lexend Deca", sans-sarif;
+    --weight-400: 400;
 }
 
 *{
@@ -35,64 +35,63 @@
 }
 
 body{
-    background-color: var(--neutralVeryLightGray);
-    min-height: 100vh;
+    background-color: var(--neutral-very-light-gray);
     display: grid;
     place-items: center;
 }
 
 main{
     max-width: 80%;
+    padding: 10% 0;
 }
 
 section{
-    padding: 2.5rem;
+    height: 33.33%;
+    padding: 2rem;
 }
 
-.sedan{
-    background-color: var(--primaryBightOrange);
+.sedan-section{
+    background-color: var(--primary-bright-organe);
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.suv{
-    background-color: var(--primaryDarkCyan);
+.suv-section{
+    background-color: var(--primary-dark-cyan);
 }
 
-.luxury{
-    background-color: var(--primaryVeryDarkCyan);
+.luxury-section{
+    background-color: var(--primary-very-dark-cyan);
     border-radius: 0 0 0.5rem 0.5rem;
-}
-
-h1, p{
-    color: var(--neutralVeryLightGray);
-}
-
-p, a{
-    font-family: var(--fontFamilyTwo);
-    font-weight: var(--weights400);
 }
 
 img{
     width: 33.33%;
 }
 
+h1, p{
+    color: var(--neutral-very-light-gray);
+}
+
+p, a{
+    font-family: var(--font-family-two);
+}
+
 h1{
-    font-family: var(--fontFamilyOne);
+    font-family: var(--font-family-one);
     text-transform: uppercase;
     font-size: xx-large;
     letter-spacing: 0.15ch;
-    font-weight: var(--weights700);
+    font-weight: var(--weight-700);
     padding: 2rem 0;
 }
 
 p{
-    font-size: smaller;
-    border:  1px solid red;
+    line-height: 1.5rem;
 }
 
 a{
     display: inline-block;
-    background-color: var(--neutralVeryLightGray);
+    background-color: var(--neutral-very-light-gray);
     border-radius: 1.25rem;
     padding: 0.625rem 1.25rem;
     text-transform: capitalize;
@@ -101,59 +100,69 @@ a{
     margin-top: 5rem;
 }
 
-/*non active button colors*/
+/*  ========================
+    non-active links colors
+    ======================== */
+
 .sedanLink{
-    color: var(--primaryBightOrange);
+    color: var(--primary-bright-organe);
 }
 
 .suvLink{
-    color: var(--primaryDarkCyan);
+    color: var(--primary-dark-cyan);
 }
 
 .luxuryLink{
-    color: var(--primaryVeryDarkCyan);
+    color: var(--primary-very-dark-cyan);
 }
 
-/*active button colors*/
+/*  ===================
+    active links colors
+    =================== */
+
 .sedanLink:hover,
 .sedanLink:focus{
-    background-color: var(--primaryBightOrange);
-    color: var(--neutralVeryLightGray);
-    outline: 0.5px solid var(--neutralVeryLightGray);
+    background-color: var(--primary-bright-organe);
+    color: var(--neutral-very-light-gray);
+    outline: 0.5px solid var(--neutral-very-light-gray);
     transition: 1s;
 }
 
 .suvLink:hover,
 .suvLink:focus{
-    background-color: var(--primaryDarkCyan);
-    color: var(--neutralVeryLightGray);
-    outline: 0.5px solid var(--neutralVeryLightGray);
+    background-color: var(--primary-dark-cyan);
+    color: var(--neutral-very-light-gray);
+    outline: 0.5px solid var(--neutral-very-light-gray);
     transition: 1s;
 }
 
 .luxuryLink:hover,
 .luxuryLink:focus{
-    background-color: var(--primaryVeryDarkCyan);
-    color: var(--neutralVeryLightGray);
-    outline: 0.5px solid var(--neutralVeryLightGray);
+    background-color: var(--primary-very-dark-cyan);
+    color: var(--neutral-very-light-gray);
+    outline: 0.5px solid var(--neutral-very-light-gray);
     transition: 1s;
 }
 
 @media screen and (min-width: 480px){
     main{ 
-        width: 50%;
+       max-width: 60%;
     }
 
     section{
         float: left;
-        width: 33.33%;
+        width: 33.3333%;
     }
 
-    .sedan{
+    p{
+        margin-right: 1.5rem;
+    }
+
+    .sedan-section{
         border-radius: 0.5rem 0 0 0.5rem;
     }
     
-    .luxury{
+    .luxury-section{
         border-radius: 0 0.5rem 0.5rem 0;
     }
 }
