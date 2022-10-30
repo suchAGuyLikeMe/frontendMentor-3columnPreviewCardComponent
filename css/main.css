@@ -1,29 +1,54 @@
 :root{
-    
-    /*primary colors*/
+
+    /*=================
+    colors
+    =================*/
+
+    /*=================
+    primary colors
+    =================*/
 
     --primary-bright-organe: hsl(31, 77%, 52%);
     --primary-dark-cyan: hsl(184, 100%, 22%);
     --primary-very-dark-cyan: hsl(179, 100%, 13%);
 
-    /*neutral colors*/
+    /*=================
+    nerutral colors
+    =================*/
 
-    /*paragraphs*/
+    /*================
+    paragraphs
+    ================*/
+
     --neutral-white: hsla(0, 0%, 100%, 0.75);
 
-    /*background, headings, buttons*/   
+    /*=============================
+    background, headings, buttons
+    =============================*/
+
     --neutral-very-light-gray: hsl(0, 0%, 95%);
 
-    /*typography*/
-    --font-size: 15px;
+    /*================
+    typography
+    ================*/
 
-    /*fonts and weigths*/
+    --font-size: 0.9375rem;
 
-    /*heading*/
+    /*================
+    fonts and weigths
+    ================*/
+
+    /*================
+    headings
+    ================*/
+
     --font-family-one: "Big Shoulders Display", sans-sarif;
     --weight-700: 700;
 
-    /*paragraph and button*/
+    /*=====================
+    paragraphs and buttons
+    =====================*/
+
     --font-family-two: "Lexend Deca", sans-sarif;
     --weight-400: 400;
 }
@@ -36,29 +61,40 @@
 
 body{
     background-color: var(--neutral-very-light-gray);
+    font-size: var(--font-size);
+    width: 100vw;
+    height: 100vh;
     display: grid;
     place-items: center;
 }
 
 main{
     max-width: 80%;
-    padding: 10% 0;
+    max-height: 95%;
 }
 
 section{
-    height: 33.33%;
     padding: 2rem;
 }
 
+/*===================
+sedan-section
+===================*/
 .sedan-section{
     background-color: var(--primary-bright-organe);
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
+/*===================
+suv-section
+===================*/
 .suv-section{
     background-color: var(--primary-dark-cyan);
 }
 
+/*===================
+luxury-section
+===================*/
 .luxury-section{
     background-color: var(--primary-very-dark-cyan);
     border-radius: 0 0 0.5rem 0.5rem;
@@ -68,15 +104,12 @@ img{
     width: 33.33%;
 }
 
-h1, p{
-    color: var(--neutral-very-light-gray);
-}
-
 p, a{
     font-family: var(--font-family-two);
 }
 
 h1{
+    color: var(--neutral-very-light-gray);
     font-family: var(--font-family-one);
     text-transform: uppercase;
     font-size: xx-large;
@@ -86,6 +119,7 @@ h1{
 }
 
 p{
+    color: var(--neutral-white);
     line-height: 1.5rem;
 }
 
@@ -97,13 +131,12 @@ a{
     text-transform: capitalize;
     text-decoration: none;
     place-items: left;
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 
-/*  ========================
-    non-active links colors
-    ======================== */
-
+/*======================
+non-active link states
+======================*/
 .sedanLink{
     color: var(--primary-bright-organe);
 }
@@ -116,46 +149,46 @@ a{
     color: var(--primary-very-dark-cyan);
 }
 
-/*  ===================
-    active links colors
-    =================== */
+/*======================
+active link states
+======================*/
+a:hover,
+a:focus{
+    color: var(--neutral-very-light-gray);
+    outline: 0.5px solid var(--neutral-very-light-gray);
+    transition: 1s;
+}
 
 .sedanLink:hover,
 .sedanLink:focus{
     background-color: var(--primary-bright-organe);
-    color: var(--neutral-very-light-gray);
-    outline: 0.5px solid var(--neutral-very-light-gray);
-    transition: 1s;
 }
 
 .suvLink:hover,
 .suvLink:focus{
     background-color: var(--primary-dark-cyan);
-    color: var(--neutral-very-light-gray);
-    outline: 0.5px solid var(--neutral-very-light-gray);
-    transition: 1s;
+
 }
 
 .luxuryLink:hover,
 .luxuryLink:focus{
     background-color: var(--primary-very-dark-cyan);
-    color: var(--neutral-very-light-gray);
-    outline: 0.5px solid var(--neutral-very-light-gray);
-    transition: 1s;
 }
 
-@media screen and (min-width: 480px){
-    main{ 
-       max-width: 60%;
-    }
+@media screen and (min-width: 600px){
 
     section{
         float: left;
-        width: 33.3333%;
+        width: 33.33%;
+        height: 100%;
+    }
+
+    img{
+        width: 20%;
     }
 
     p{
-        margin-right: 1.5rem;
+        margin-bottom: 2rem; 
     }
 
     .sedan-section{
