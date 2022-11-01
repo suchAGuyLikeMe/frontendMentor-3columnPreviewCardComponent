@@ -76,7 +76,7 @@ article{
     display: flex;
     flex-direction: column;
     max-width: 80vw;
-    max-height: 80vh;
+    margin: 10% 0;
 }
 
 section{
