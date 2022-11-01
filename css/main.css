@@ -62,15 +62,21 @@
 body{
     background-color: var(--neutral-very-light-gray);
     font-size: var(--font-size);
+}
+body,
+main{
     width: 100vw;
     height: 100vh;
     display: grid;
     place-items: center;
 }
 
-main{
-    max-width: 80%;
-    max-height: 95%;
+article{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    max-width: 80vw;
+    max-height: 80%;
 }
 
 section{
@@ -130,7 +136,6 @@ a{
     padding: 0.625rem 1.25rem;
     text-transform: capitalize;
     text-decoration: none;
-    place-items: left;
     margin-top: 1rem;
 }
 
@@ -176,12 +181,10 @@ a:focus{
 }
 
 @media screen and (min-width: 600px){
-    main{
-        max-width: 50%;
-    }
-    section{
-        float: left;
-        width: 33.33%;
+    article{
+        display: flex;
+        flex-direction: row;
+        width: 60vw;
     }
 
     img{
@@ -195,7 +198,7 @@ a:focus{
     .sedan-section{
         border-radius: 0.5rem 0 0 0.5rem;
     }
-    
+
     .luxury-section{
         border-radius: 0 0.5rem 0.5rem 0;
     }
