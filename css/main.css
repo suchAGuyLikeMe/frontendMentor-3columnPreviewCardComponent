@@ -1,5 +1,4 @@
-:root{
-
+:root {
     /*=================
     colors
     =================*/
@@ -53,13 +52,13 @@
     --weight-400: 400;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: var(--neutral-very-light-gray);
     font-size: var(--font-size);
     width: 100vw;
@@ -67,54 +66,60 @@ body{
 }
 
 body,
-main{
+main {
     display: grid;
     place-items: center;
 }
 
-article{
-    display: flex;
-    flex-direction: column;
-    max-width: 80vw;
-    margin: 10% 0;
+main {
+    max-width: 100%;
 }
 
-section{
+article {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 10% 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+section {
     padding: 2rem;
 }
 
 /*===================
 sedan-section
 ===================*/
-.sedan-section{
+.sedan-section {
     background-color: var(--primary-bright-organe);
-    border-radius: 0.5rem 0.5rem 0 0;
 }
 
 /*===================
 suv-section
 ===================*/
-.suv-section{
+.suv-section {
     background-color: var(--primary-dark-cyan);
 }
 
 /*===================
 luxury-section
 ===================*/
-.luxury-section{
+.luxury-section {
     background-color: var(--primary-very-dark-cyan);
-    border-radius: 0 0 0.5rem 0.5rem;
 }
 
-img{
-    width: 33.33%;
+img {
+    max-width: 33.33%;
 }
 
-p, a{
+p,
+a {
     font-family: var(--font-family-two);
+    font-weight: var(--weight-400);
 }
 
-h1{
+h1 {
     color: var(--neutral-very-light-gray);
     font-family: var(--font-family-one);
     text-transform: uppercase;
@@ -124,12 +129,13 @@ h1{
     padding: 2rem 0;
 }
 
-p{
+p {
     color: var(--neutral-white);
+    letter-spacing: 0.1ch;
     line-height: 1.5rem;
 }
 
-a{
+a {
     display: inline-block;
     background-color: var(--neutral-very-light-gray);
     border-radius: 1.25rem;
@@ -142,15 +148,15 @@ a{
 /*======================
 non-active link states
 ======================*/
-.sedanLink{
+.sedanLink {
     color: var(--primary-bright-organe);
 }
 
-.suvLink{
+.suvLink {
     color: var(--primary-dark-cyan);
 }
 
-.luxuryLink{
+.luxuryLink {
     color: var(--primary-very-dark-cyan);
 }
 
@@ -158,48 +164,41 @@ non-active link states
 active link states
 ======================*/
 a:hover,
-a:focus{
+a:focus {
     color: var(--neutral-very-light-gray);
     outline: 0.5px solid var(--neutral-very-light-gray);
     transition: 1s;
 }
 
 .sedanLink:hover,
-.sedanLink:focus{
+.sedanLink:focus {
     background-color: var(--primary-bright-organe);
 }
 
 .suvLink:hover,
-.suvLink:focus{
+.suvLink:focus {
     background-color: var(--primary-dark-cyan);
-
 }
 
 .luxuryLink:hover,
-.luxuryLink:focus{
+.luxuryLink:focus {
     background-color: var(--primary-very-dark-cyan);
 }
 
-@media screen and (min-width: 600px){
-    article{
+/*600px*/
+@media screen and (min-width: 37.5rem) {
+    article {
         display: flex;
         flex-direction: row;
-        width: 60vw;
+        max-width: 69%;
+        margin: 0;
     }
 
-    img{
-        width: 20%;
+    section {
+        max-width: 33.33%;
     }
 
-    p{
-        margin-bottom: 2rem; 
-    }
-
-    .sedan-section{
-        border-radius: 0.5rem 0 0 0.5rem;
-    }
-
-    .luxury-section{
-        border-radius: 0 0.5rem 0.5rem 0;
+    p {
+        margin-bottom: 2rem;
     }
 }
