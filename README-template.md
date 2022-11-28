@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
+-   Solution URL: (https://www.frontendmentor.io/solutions/3-column-card-component-AHN1_DZcl8)
 -   Live Site URL: (https://suchaguylikeme-3columnpreviewcard.pages.dev)
 
 ## My process

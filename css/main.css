@@ -74,21 +74,21 @@ main {
     justify-content: center;
 }
 
-article,
-section {
+section,
+article {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-article {
+section {
     width: 80%;
     max-width: 100%;
     border-radius: 0.5rem;
     overflow: hidden;
 }
 
-section {
+article {
     padding: 2rem;
 }
 
@@ -184,7 +184,7 @@ a:focus {
         margin-bottom: 5rem;
     }
 
-    article {
+    section {
         flex-direction: row;
     }
 }
